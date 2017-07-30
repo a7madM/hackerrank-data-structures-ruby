@@ -3,7 +3,9 @@ require_relative '../src/DynamicArrays.rb'
 class TestDynamicArrays < Test::Unit::TestCase
   def test_case1
     dynamic_arrays = DynamicArrays.new
-    input = dynamic_arrays.input
-    assert_equal(1, 1)
+    n, q = dynamic_arrays.input
+    outout = dynamic_arrays.solve n, q
+    expected = [7, 3]
+    assert_equal(expected, outout)
   end
 end
