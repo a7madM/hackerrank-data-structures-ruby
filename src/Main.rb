@@ -2,6 +2,23 @@ require_relative 'Arrays.rb'
 require_relative 'TwoDimensArrays.rb'
 require_relative 'DynamicArrays.rb'
 require_relative 'LeftRotation.rb'
+require_relative 'SparseArrays.rb'
+require_relative 'AlgorithmCrush.rb'
+
+def algorithm_crush
+  algorithms_crush = AlgorithmCrush.new
+  data = algorithms_crush.input
+  p  algorithms_crush.solve(data)
+end
+
+algorithm_crush
+
+# def sparse_arrays
+#   sparse_arrays = SparseArrays.new
+#   strings, queries = sparse_arrays.input
+#   sparse_arrays.solve(queries, strings)
+# end
+# sparse_arrays
 
 def left_rotation
   left_rotation = LeftRotation.new
@@ -11,7 +28,8 @@ def left_rotation
     print "#{item} "
   end
 end
-left_rotation
+
+# left_rotation
 
 def test_arrays
   arrays = Arrays.new
