@@ -1,6 +1,18 @@
 require_relative 'Arrays.rb'
 require_relative 'TwoDimensArrays.rb'
 require_relative 'DynamicArrays.rb'
+require_relative 'LeftRotation.rb'
+
+def left_rotation
+  left_rotation = LeftRotation.new
+  input, shift = left_rotation.input
+  result = left_rotation.shift input, shift
+  result.each do |item|
+    print "#{item} "
+  end
+end
+left_rotation
+
 def test_arrays
   arrays = Arrays.new
   input = arrays.input
@@ -30,4 +42,4 @@ def test_dynamic_arrays
   end
 end
 
-test_dynamic_arrays
+# test_dynamic_arrays
